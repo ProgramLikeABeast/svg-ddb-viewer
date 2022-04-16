@@ -29,8 +29,12 @@ export default function TitleSegment({
         onChange={changeCurrentSVG}
       >
         {/* Map the list of incoming options */}
-        {svgNameList.map((svgName) => {
-          return <Option value={svgName}>{svgName}</Option>;
+        {svgNameList.map((svgName, idx) => {
+          return (
+            <Option key={idx} value={svgName}>
+              {svgName}
+            </Option>
+          );
         })}
       </Select>
     </>
